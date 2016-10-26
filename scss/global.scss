@@ -1,0 +1,136 @@
+// sources
+@import 'src/_fonts.scss'; // fonts
+@import 'src/_wordpress.scss'; // wp classes
+@import 'src/_bootstrap.scss'; // bootstrap
+@import 'src/_jquery.fancybox.scss'; // fancybox
+@import 'src/_slick.scss'; // slick slider
+// modules
+
+// utilites
+*{
+	outline: none !important;
+}
+iframe{
+	border: none;
+}
+.wrapper{
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	min-width: 320px;
+}
+.container{
+	min-width: 320px;
+}
+.webber{
+	margin: 0;
+	padding: 35px 0;
+	img{
+		height: 18px;
+		margin-left: 7px;
+		margin-right: 7px;
+	}
+}
+// titles
+.title-korona{
+	text-align: center;
+	position: relative;
+	color: #26272d;
+	font-size: 45px;
+	margin-bottom: 45px;
+	&:before{
+		content: '';
+		position: absolute;
+		width: 160px;
+		height: 2px;
+		left: 50%;
+		margin-left: -80px;
+		bottom: -15px;
+		background: $brand-primary;
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		height: 24px;
+		width: 64px;
+		background: url(../img/korona.svg) 50% 50% no-repeat #fff;
+		background-size: auto 24px;
+		left: 50%;
+		margin-left: -32px;
+		bottom: -28px;
+	}
+}
+
+// buttons
+.btn{
+	transition: all .3s;
+}
+.btn-primary{
+	padding: 7px 40px;
+	border: none;
+}
+.btn-green-top{
+	background: $brand-primary;
+	color: #fff;
+	font-size: 15px;
+	padding: 10px 32px;
+	&:hover,
+	&:focus,
+	&:active{
+		background: darken($brand-primary,10%);
+		color: #fff;
+	}
+}
+.btn-green{
+	background: $brand-primary;
+	color: #fff;
+	border-radius: 35px;
+	padding: 10px 50px;
+	margin-bottom: 10px;
+	&:hover,
+	&:focus,
+	&:active{
+		background: darken($brand-primary,10%);
+		color: #fff;
+	}
+}
+
+// other
+.modal-video{
+	height: 80vh;
+	width: 80vw;
+}
+.fform-container{
+	padding: 15px;
+	width: 270px;
+	.title-korona{
+		font-size: 30px;
+	}
+}
+.form-control:focus {
+    border-color: $brand-primary;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba($brand-primary,0.6);
+}
+
+// back to home
+.back-to-home{
+	background: $brand-primary;
+	color: #fff;
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	padding: 7px 15px;
+	transition: all .3s;
+	z-index: 3;
+	cursor: pointer;
+	&:hover,
+	&:active,
+	&:focus{
+		color: #fff;
+		background: darken($brand-primary,5%);
+		text-decoration: none;
+	}
+}
+.to-top{
+	display: none;
+}
