@@ -145,19 +145,19 @@
 					}
 				}
 				@media screen and (min-width: 767px){
-				&.current-menu-item,
-				&:hover,
-				&:focus,
-				&:active{
-					>a{
-						color: #8c8f94;
-						text-decoration: none;
-						&:after{
-							width: 50px;
-							margin-left: -25px;
+					&.current-menu-item,
+					&:hover,
+					&:focus,
+					&:active{
+						>a{
+							color: #8c8f94;
+							text-decoration: none;
+							&:after{
+								width: 50px;
+								margin-left: -25px;
+							}
 						}
 					}
-				}
 					&:hover{
 						.sub-menu{
 							display: block;
@@ -724,7 +724,7 @@
 		}
 	}
 	.btn-container-wr{
-			margin-top: -30px;
+		margin-top: -30px;
 		.btn-container{
 			display: inline-block;
 			background: #f5f5f8;
@@ -1272,11 +1272,13 @@
 		background: $brand-primary;
 		padding: 30px;
 		text-align: center;
-		font-size: 40px;
-		font-weight: 300px;
-		color: #fff;
-		@media (max-width: 991px) {
-			font-size: 27px;
+		span{
+			font-size: 40px;
+			font-weight: 300px;
+			color: #fff;
+			@media (max-width: 991px) {
+				font-size: 27px;
+			}
 		}
 		.btn.btn-green{
 			background: #fff;
@@ -1335,6 +1337,74 @@
 					top: 50%;
 					left: -29px;
 					margin-top: -10px;
+				}
+			}
+		}
+	}
+}
+
+// portfolio slider
+.portfolio-slider-container{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	.portfolio-slider{
+		.slick-dots{
+			list-style: none;
+			text-align: center;
+			margin: 10px 0;
+			padding: 0;
+			li{
+				display: none;
+				font-size: 25px;
+				&.slick-active{
+					display: inline-block;
+				}
+			}
+		}
+		.slick-prev,
+		.slick-next{
+			margin: 0;
+			padding: 0;
+			outline: none;
+			border: none;
+			background: #fff;
+			width: 50px;
+			height: 60px;
+			position: absolute;
+			top: 50%;
+			margin-top: -50px;
+			z-index: 2;
+			@media (max-width: 767px) {
+				display: none;
+				visibility: hidden;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				border-top: 2px solid #000;
+				border-left: 2px solid #000;
+				top: 20px;
+				transition: all .3s;
+			}
+			&:hover{
+				&:after{
+					border-color: $brand-primary;	
+				}
+			}
+			&.slick-prev{
+				left: 0;
+				&:after{
+					transform: rotate(-45deg);
+					left: 19px;
+				}
+			}
+			&.slick-next{
+				right: 0;
+				&:after{
+					transform: rotate(135deg);
+					right: 19px;
 				}
 			}
 		}

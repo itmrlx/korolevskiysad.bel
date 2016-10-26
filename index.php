@@ -74,6 +74,19 @@
 		</div>
 	</div>
 
+	<!-- portfolio slider -->
+	<div class="container portfolio-slider-container">
+		<h3 class="title-korona"><?php the_field('slider_title','option'); ?></h3>
+		<div class="portfolio-slider">
+			<?php $images = get_field('slider_photos','option'); if( $images ): ?>
+				<?php foreach( $images as $image ): ?>
+					<div class="slide"><img src="<?php bloginfo('template_url'); ?>/img/dot.png" data-lazy="<?php echo $image['sizes']['large']; ?>" alt="?php echo $image['alt']; ?>"></div>
+				<?php endforeach; ?>
+			<?php endif; ?>
+		</div>
+		<div class="centered"><a href="#fform" class="btn btn-green fancybox" onclick="fform('Хочу также!', 'Портфолио слайдер')">Хочу также!</a></div>
+	</div>
+
 	<!-- portfolio -->
 	<div class="tabs">
 		<div class="wrapper portfolio-header-wr" id="portfolio">
